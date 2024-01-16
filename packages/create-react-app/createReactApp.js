@@ -454,7 +454,7 @@ function run(
         console.log(
           `Installing ${chalk.cyan('react')}, ${chalk.cyan(
             'react-dom'
-          )},  ${chalk.cyan('sass')} and ${chalk.cyan(packageInfo.name)}${
+          )}, ${chalk.cyan('sass')} and ${chalk.cyan(packageInfo.name)}${
             supportsTemplates ? ` with ${chalk.cyan(templateInfo.name)}` : ''
           }...`
         );
