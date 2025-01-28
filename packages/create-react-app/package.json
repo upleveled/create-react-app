@@ -1,29 +1,26 @@
 {
   "name": "@upleveled/create-react-app",
   "version": "5.0.5",
+  "description": "Create React apps with no build configuration.",
   "keywords": [
     "react"
   ],
-  "description": "Create React apps with no build configuration.",
+  "bugs": {
+    "url": "https://github.com/facebook/create-react-app/issues"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/facebook/create-react-app.git",
     "directory": "packages/create-react-app"
   },
   "license": "MIT",
-  "engines": {
-    "node": ">=14"
-  },
-  "bugs": {
-    "url": "https://github.com/facebook/create-react-app/issues"
+  "bin": {
+    "create-react-app": "./index.js"
   },
   "files": [
     "index.js",
     "createReactApp.js"
   ],
-  "bin": {
-    "create-react-app": "./index.js"
-  },
   "scripts": {
     "test": "cross-env FORCE_COLOR=true jest"
   },
@@ -43,5 +40,8 @@
   "devDependencies": {
     "cross-env": "^7.0.3",
     "jest": "^27.4.3"
+  },
+  "engines": {
+    "node": ">=14"
   }
 }
