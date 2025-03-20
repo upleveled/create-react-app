@@ -1,6 +1,6 @@
 {
   "name": "@upleveled/react-scripts",
-  "version": "5.0.13",
+  "version": "5.1.2",
   "description": "Configuration and scripts for Create React App.",
   "bugs": {
     "url": "https://github.com/facebook/create-react-app/issues"
@@ -42,7 +42,7 @@
     "@svgr/webpack": "^5.5.0",
     "babel-loader": "^8.2.3",
     "babel-plugin-named-asset-import": "^0.3.8",
-    "babel-preset-react-app": "^10.0.1",
+    "babel-preset-react-app": "^10.1.0",
     "bfj": "^7.0.2",
     "browserslist": "^4.18.1",
     "camelcase": "^6.2.1",
@@ -79,8 +79,8 @@
     "workbox-webpack-plugin": "^6.4.1"
   },
   "devDependencies": {
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "peerDependencies": {
     "react": ">= 16",
