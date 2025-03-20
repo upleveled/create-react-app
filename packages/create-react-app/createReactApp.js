@@ -565,6 +565,8 @@ function run(
             }
           });
         });
+        return;
+        // eslint-disable-next-line no-unreachable
         const remainingFiles = fs.readdirSync(path.join(root));
         if (!remainingFiles.length) {
           // Delete target folder if empty
