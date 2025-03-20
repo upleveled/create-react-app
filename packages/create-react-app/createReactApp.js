@@ -302,6 +302,10 @@ function createApp(name, verbose, version, template, useYarn, usePnp) {
     name: appName,
     version: '0.1.0',
     private: true,
+    pnpm: {
+      onlyBuiltDependencies: ['@parcel/watcher'],
+      ignoredBuiltDependencies: ['core-js', 'core-js-pure'],
+    },
   };
   fs.writeFileSync(
     path.join(root, 'package.json'),
@@ -1137,6 +1141,7 @@ function executeNodeScript({ cwd, args }, data, source) {
   });
 }
 
+// eslint-disable-next-line no-unused-vars
 function checkForLatestVersion() {
   return new Promise((resolve, reject) => {
     https
