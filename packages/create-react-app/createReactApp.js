@@ -72,7 +72,8 @@ function writeWarningFile() {
 let projectName;
 
 function init() {
-  if (!hasGivenWarning()) {
+  // eslint-disable-next-line no-constant-condition
+  if (false && !hasGivenWarning()) {
     console.log(chalk.yellow.bold('create-react-app is deprecated.'));
     console.log('');
     console.log(
@@ -221,12 +222,15 @@ function init() {
     process.exit(1);
   }
 
+  return;
+
   // We first check the registry directly via the API, and if that fails, we try
   // the slower `npm view [package] version` command.
   //
   // This is important for users in environments where direct access to npm is
   // blocked by a firewall, and packages are provided exclusively via a private
   // registry.
+  // eslint-disable-next-line no-unreachable
   checkForLatestVersion()
     .catch(() => {
       try {
