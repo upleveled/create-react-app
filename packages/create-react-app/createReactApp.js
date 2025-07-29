@@ -303,7 +303,7 @@ function createApp(name, verbose, version, template, useYarn, usePnp) {
     version: '0.1.0',
     private: true,
     pnpm: {
-      onlyBuiltDependencies: ['@parcel/watcher'],
+      onlyBuiltDependencies: ['@parcel/watcher', 'unrs-resolver'],
       ignoredBuiltDependencies: ['core-js', 'core-js-pure'],
     },
   };
