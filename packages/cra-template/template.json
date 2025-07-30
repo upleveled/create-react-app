@@ -8,6 +8,8 @@
       "@testing-library/user-event": "^14.6.1",
       "@types/testing-library__jest-dom": "^6.0.0",
       "jest": "^30.0.5",
+      "jest-environment-jsdom": "^30.0.5",
+      "jest-watch-typeahead": "^3.0.1",
       "eslint": "^9.32.0"
     }
   }
