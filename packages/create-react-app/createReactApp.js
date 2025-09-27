@@ -316,7 +316,8 @@ function createApp(name, verbose, version, template, useYarn, usePnp) {
   - core-js-pure
 onlyBuiltDependencies:
   - '@parcel/watcher'
-  - unrs-resolver`,
+  - unrs-resolver
+`,
   );
 
   const originalDirectory = process.cwd();
