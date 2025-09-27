@@ -302,14 +302,21 @@ function createApp(name, verbose, version, template, useYarn, usePnp) {
     name: appName,
     version: '0.1.0',
     private: true,
-    pnpm: {
-      onlyBuiltDependencies: ['@parcel/watcher', 'unrs-resolver'],
-      ignoredBuiltDependencies: ['core-js', 'core-js-pure'],
-    },
   };
   fs.writeFileSync(
     path.join(root, 'package.json'),
     JSON.stringify(packageJson, null, 2) + os.EOL,
+  );
+
+  // Configure packages to be built with pnpm
+  fs.writeFileSync(
+    path.join(root, 'pnpm-workspace.yaml'),
+    `ignoredBuiltDependencies:
+  - core-js
+  - core-js-pure
+onlyBuiltDependencies:
+  - '@parcel/watcher'
+  - unrs-resolver`,
   );
 
   const originalDirectory = process.cwd();
