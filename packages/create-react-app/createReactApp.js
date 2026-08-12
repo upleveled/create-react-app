@@ -312,10 +312,10 @@ function createApp(name, verbose, version, template, useYarn, usePnp) {
   fs.writeFileSync(
     path.join(root, 'pnpm-workspace.yaml'),
     `allowBuilds:
-  - '@parcel/watcher': true
-  - core-js: false
-  - core-js-pure: false
-  - unrs-resolver: false
+  '@parcel/watcher': true
+  core-js: false
+  core-js-pure: false
+  unrs-resolver: false
 `,
   );
 
