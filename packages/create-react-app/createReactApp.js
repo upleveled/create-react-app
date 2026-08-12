@@ -311,12 +311,11 @@ function createApp(name, verbose, version, template, useYarn, usePnp) {
   // Configure packages to be built with pnpm
   fs.writeFileSync(
     path.join(root, 'pnpm-workspace.yaml'),
-    `ignoredBuiltDependencies:
-  - core-js
-  - core-js-pure
-onlyBuiltDependencies:
-  - '@parcel/watcher'
-  - unrs-resolver
+    `allowBuilds:
+  - '@parcel/watcher': true
+  - core-js: false
+  - core-js-pure: false
+  - unrs-resolver: false
 `,
   );
 
