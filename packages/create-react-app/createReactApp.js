@@ -315,7 +315,7 @@ function createApp(name, verbose, version, template, useYarn, usePnp) {
   '@parcel/watcher': true
   core-js: false
   core-js-pure: false
-  unrs-resolver: false
+  unrs-resolver: true
 `,
   );
 
