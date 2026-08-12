@@ -743,10 +743,9 @@ function getPackageInfo(installPackage) {
         return extractStream(stream, obj.tmpdir).then(() => obj);
       })
       .then((obj) => {
-        const { name, version } = require(path.join(
-          obj.tmpdir,
-          'package.json',
-        ));
+        const { name, version } = require(
+          path.join(obj.tmpdir, 'package.json'),
+        );
         obj.cleanup();
         return { name, version };
       })
@@ -781,10 +780,9 @@ function getPackageInfo(installPackage) {
     });
   } else if (installPackage.match(/^file:/)) {
     const installPackagePath = installPackage.match(/^file:(.*)?$/)[1];
-    const { name, version } = require(path.join(
-      installPackagePath,
-      'package.json',
-    ));
+    const { name, version } = require(
+      path.join(installPackagePath, 'package.json'),
+    );
     return Promise.resolve({ name, version });
   }
   return Promise.resolve({ name: installPackage });
