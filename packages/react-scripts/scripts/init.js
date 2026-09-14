@@ -295,7 +295,7 @@ module.exports = function (
     args = [
       'install',
       // '--no-audit', // https://github.com/facebook/create-react-app/issues/11174
-      '--save',
+      // '--save', // New version of pnpm doesn't support --save
       verbose && '--verbose',
     ].filter((e) => e);
   }
